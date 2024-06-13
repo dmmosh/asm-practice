@@ -1,7 +1,8 @@
 
 
 ; DATA SECTION
-; stores variables, what to store in memory
+; stores pointers to variables, what to store in memory
+; POINTERS ( yippe)
 section .data 
     ; have to give 3 things: name, type (size) and initial value
     ; num DB  - defined byte - 1 byte of data
@@ -33,7 +34,8 @@ _start: ; LABEL, segment of code, everything below start will run
     ; set to 1 -> exit program 
 
     ; MOV does to, from (1 into eax register)
-    MOV ebx, num  ; exit status code
+    MOV ebx, [num]  ; exit status code
+    ; [] boxy brackets, DEREFERNCE POINTER
     INT 80h ; system interrupt
 
 
