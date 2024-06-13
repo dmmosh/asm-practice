@@ -26,13 +26,14 @@ _start: ; LABEL, segment of code, everything below start will run
     ; nasm -f elf -o first.o first.s && ld -m elf_i386 -o out first.o
     ; compiles to object file and then makes an executable targeting i386
 
+
+
     MOV eax, 1 ; MOV : move values into / out of registors 
     ; telling what system call to do
     ; set to 1 -> exit program 
 
     ; MOV does to, from (1 into eax register)
-
-    MOV ebx, 25  ; exit status code
+    MOV ebx, num  ; exit status code
     INT 80h ; system interrupt
 
 
