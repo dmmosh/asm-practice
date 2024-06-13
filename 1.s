@@ -3,6 +3,7 @@
 ; DATA SECTION
 ; stores pointers to variables, what to store in memory
 ; POINTERS ( yippe)
+; every variable is a pointer
 section .data 
     ; have to give 3 things: name, type (size) and initial value
     ; num DB  - defined byte - 1 byte of data
