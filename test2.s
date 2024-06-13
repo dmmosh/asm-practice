@@ -1,8 +1,8 @@
 
 
 section .data
-    num DB 1
-    num2 DB 2
+    num DB 10
+    num2 DB 22
     ; memory is stored right next to each other
 
 
