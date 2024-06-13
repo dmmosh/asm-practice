@@ -25,7 +25,8 @@ _start: ; LABEL, segment of code, everything below start will run
 ; basically int main() {}
 
     ; COMPILE:
-    ; nasm -f elf -o first.o first.s && ld -m elf_i386 -o out first.o
+    ; nasm -f elf -o 1.o 1.s && ld -m elf_i386 -o 1 1.o && git-all && ./1 && echo $?
+    
     ; compiles to object file and then makes an executable targeting i386
 
 
