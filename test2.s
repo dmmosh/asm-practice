@@ -7,9 +7,12 @@ section .data
 
 section .text
 global _start
+
+
+
+_start:
     MOV ebx,[num]
     MOV ecx,[num2]
     MOV eax, 1
     INT 80h
 
-_start:
