@@ -11,6 +11,6 @@ global _start
 
 
 _start:
-    MOV eax,1
     MOV bl,[arr]
+    MOV eax,1
     INT 80h
