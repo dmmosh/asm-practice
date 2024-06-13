@@ -1,8 +1,9 @@
 
 
 section .data
-    num DB 12
-    num2 DB 14
+    num DB 1
+    num2 DB 2
+    ; memory is stored right next to each other
 
 
 section .text
@@ -11,8 +12,10 @@ global _start
 
   
 _start:
-    MOV ebx,[num]
-    MOV ecx,[num2]
+    ; registers are stored right nex tot each other
+    ; 
+    MOV bl,[num]
+    MOV ch,[num2]
     MOV eax,1
     INT 80h
 
