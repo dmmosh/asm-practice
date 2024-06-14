@@ -26,7 +26,7 @@ _start: ; LABEL, segment of code, everything below start will run
 
     ; COMPILE:
     ; nasm -f elf -o 1.o 1.s && ld -m elf_i386 -o 1 1.o && git-all && ./1 && echo $?
-    
+
     ; compiles to object file and then makes an executable targeting i386
 
 
@@ -38,6 +38,8 @@ _start: ; LABEL, segment of code, everything below start will run
     ; MOV does to, from (1 into eax register)
     MOV ebx, [num]  ; exit status code
     ; [] boxy brackets, DEREFERNCE POINTER
+    ; can add +x to dereference x bytes in memory
+    ; BYTES NOT ELEMENTS
     INT 80h ; system interrupt
 
 

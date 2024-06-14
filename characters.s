@@ -6,6 +6,7 @@ section .data
     arr DB 1,2,3,4 ; array, 
     ; arrays have to way to end, so have to manually put something at the end to indicate the end
     ; null terminator
+    str1 DB "hello",0 ; 0 is null terminator
 
 
 section .text
