@@ -1,5 +1,5 @@
 section .data
-
+    num2 DB 3 DUP(2)
 
 ; uninitialized variables
 ; cant assign directly because no idea of the size
