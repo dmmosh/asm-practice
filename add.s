@@ -2,7 +2,8 @@ section .data
 
 
 section .bss 
-
+    num1 RESB 1
+    num2 RESB 1
 
 
 
@@ -13,6 +14,10 @@ global _start
 
 
 _start:
+    MOV eax,5
+    MOV [num1],eax
+    MOV [num2], eax
+
     MOV eax,1
-    MOV ebx,20
+    MOV ebx,[num1]
     INT 80h
