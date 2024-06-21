@@ -17,6 +17,7 @@ _start:
     MOV eax,5
     MOV [num1],eax
     MOV [num2], eax
+    add [num1],eax
 
     MOV eax,1
     MOV ebx,[num1]
