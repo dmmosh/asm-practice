@@ -49,10 +49,10 @@ _start:
     ; how to get the carry (value from buffer overflow)
     MOV eax,1 ; system reads code 1, meaning exit
 
-   MOV bl,0b11111111
-   MOV cl,0b00000001
-   ADD bl,cl
-   ADC bh,0 ; ADD but adds the number (from) + the carry flag
-
+   MOV cl,0b11111111
+   MOV dl,0b00000001
+   ADD cl,dl
+   ADC ch,0 ; ADD but adds the number (from) + the carry flag
+    MOV ebx, ecx
 
     INT 80h ; requests system call
