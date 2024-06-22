@@ -51,6 +51,7 @@ _start:
 
    MOV bl,0b11111111
    MOV cl,0b00000001
+   ADD bl,cl
    ADC bh,0 ; ADD but adds the number (from) + the carry flag
 
 
