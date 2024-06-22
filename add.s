@@ -47,7 +47,7 @@ _start:
     ; ZF: operation is zero
     
     ; how to get the carry (value from buffer overflow)
-    MOV cl,0
+    MOV cl,1
     MOV bl,255
     ADD ebx,ecx
     ;ADC bh,0 ; adds the carry bit to the higher part of a register
