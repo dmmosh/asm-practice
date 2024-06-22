@@ -50,7 +50,7 @@ _start:
    MOV bl,0b11111111
    MOV cl,0b00000001
    ADD bl,cl
-   ADC bx,0
+   ADC bh,0 ;adds 
 
     MOV eax,1 ; system reads code 1, meaning exit
     INT 80h ; requests system call
