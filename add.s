@@ -47,7 +47,7 @@ _start:
     
     ; how to get the carry (value from buffer overflow)
     ADD bl,cl
-    ADC bl,0 ; adds the carry bit to the higher part of a register
+    ADC bh,0 ; adds the carry bit to the higher part of a register
     MOV [num1], bl
     MOV ebx,[num1]
 
