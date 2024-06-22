@@ -47,11 +47,10 @@ _start:
     ; ZF: operation is zero
     
     ; how to get the carry (value from buffer overflow)
-    MOV cl,1
-    MOV bl,255
-    ADD ebx,ecx
-    ;ADC bh,0 ; adds the carry bit to the higher part of a register
-
+   MOV bl,0b11111111
+   MOV cl,0b00000001
+   ADD bl,cl
+   ADC bh,ch
 
     MOV eax,1 ; system reads code 1, meaning exit
     INT 80h ; requests system call
