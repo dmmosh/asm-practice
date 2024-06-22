@@ -47,12 +47,11 @@ _start:
     ; ZF: operation is zero
     
     ; how to get the carry (value from buffer overflow)
+
+   MOV bl,0b11111111
+   MOV cl,0b00010001
+   ADD bl,1
+   ADC bh,0 ; ADD but adds the number (from) + the carry flag
+
     MOV eax,1 ; system reads code 1, meaning exit
-
-   MOV cl,0b11111111
-   MOV dl,0b00010001
-   ADD cl,dl
-   ADC ecx,0 ; ADD but adds the number (from) + the carry flag
-    MOV ebx, ecx
-
     INT 80h ; requests system call
