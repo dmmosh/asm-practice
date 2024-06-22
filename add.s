@@ -50,8 +50,8 @@ _start:
     MOV bl,0b00000001 
     MOV cl,0b11111111
     ADC bl,0 ; adds the carry bit to the higher part of a register
-    MOV [num1], bx
-    MOV ebx,[num1]
+    MOV [num3], bx
+    MOV ebx,[num3]
 
 
     MOV eax,1 ; system reads code 1, meaning exit
