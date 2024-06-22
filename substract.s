@@ -13,8 +13,8 @@ global _start
 
 ; NEGATIVE NUMBERS 
 _start:
-    MOV al,5
-    MOV bl,3
+    MOV al,3
+    MOV bl,5
     SUB al, bl
     MOV bl,al
 
