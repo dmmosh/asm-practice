@@ -50,7 +50,7 @@ _start:
     MOV cl,0b11111111
     ADD bl,cl
     ADC bh,0 ; adds the carry bit to the higher part of a register
-    MOV [num1], bl
+    MOV [num1], bx
     MOV ebx,[num1]
 
 
