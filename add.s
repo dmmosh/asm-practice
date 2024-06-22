@@ -32,6 +32,12 @@ _start:
     MOV eax,0b00000001
     ADD [num1],eax
 
+
+    MOV bl,0b00000001
+    MOV cl,0b11111111
+    MOV [num1],cl
+    ADD [num1],bl
+    MOV ebx,[num1]
+
     MOV eax,1 ; system reads code 1, meaning exit
-    MOV ebx,[num1] ; system returns the code
     INT 80h ; requests system call
