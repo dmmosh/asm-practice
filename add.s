@@ -2,7 +2,7 @@ section .data
 
 
 section .bss 
-    num1 RESB 1
+    num1 RESD 1
     num2 RESB 1
 
 
