@@ -16,6 +16,9 @@ global _start
 ; EFLAGS
 ; a register which gives info on whats just been run
 
+; PF flag: parody flag , set when value is odd # (1), when even (0) 
+; basically modulus
+
 _start:
     MOV eax,5
     MOV [num1],eax
