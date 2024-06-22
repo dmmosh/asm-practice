@@ -33,11 +33,24 @@ _start:
     ADD [num1],eax
 
 
-    MOV bl,0b00000001
+    ; buffer overflowing
+    ; 0b: binary representation
+    ; 0x: hexadecimal representation
+    MOV bl,0b00000001 
     MOV cl,0b11111111
     MOV [num1],cl
     ADD [num1],bl
     MOV ebx,[num1]
+
+    ; eflags register 
+    ; ZF: operation is zero
+    
+    ; how to get the carry (value from buffer overflow)
+    ADD bl,cl
+    ADC bl,0 ; adds the carry bit to the higher part of a register
+    MOV [num1], bl
+    MOV ebx,[num1]
+
 
     MOV eax,1 ; system reads code 1, meaning exit
     INT 80h ; requests system call
