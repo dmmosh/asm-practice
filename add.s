@@ -23,7 +23,8 @@ _start:
     MOV eax,5
     MOV [num1],eax
     MOV [num2], eax
-    ADD [num1],eax
+    MOV ebx,30
+    ADD [num1],ebx
 
     MOV eax,1
     MOV ebx,[num1]
