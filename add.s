@@ -52,7 +52,7 @@ _start:
    MOV cl,0b11111111
    MOV dl,0b00000001
    ADD cl,dl
-   ADC ch,0 ; ADD but adds the number (from) + the carry flag
+   ADC ecx,0 ; ADD but adds the number (from) + the carry flag
     MOV ebx, ecx
 
     INT 80h ; requests system call
