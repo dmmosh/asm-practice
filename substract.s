@@ -13,10 +13,10 @@ global _start
 
 ; NEGATIVE NUMBERS 
 _start:
-    MOV eax,5
-    MOV ebx,3
-    SUB eax, ebx
-    MOV bx,ax
+    MOV al,5
+    MOV bl,3
+    SUB al, bl
+    MOV bl,al
 
     MOV al,1
     INT 80h
