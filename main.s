@@ -48,7 +48,7 @@ main:
     push rbx
     push rax
     call printf wrt ..plt
-    add rsp,19*8+8+8
+    
 
 
     mov	rax,0	; Exit code 0
