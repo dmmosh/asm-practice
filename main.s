@@ -5,7 +5,7 @@ section .data
     syscall
     ; FUNCTION ARGS (64 bit nasm)
 
-    format2 db "%i\t power of 2: %i",0
+    format2 db "%i  power of 2: %i",0
     
 section .bss
     data1 resb 1
