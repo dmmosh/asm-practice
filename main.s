@@ -36,7 +36,7 @@ main:
 
     ; HOW TO COMPILE:
 
-    ;  nasm -f elf64 main.s && gcc -no-pie main.o -o main
+    ;  nasm -f elf64 main.s && gcc -no-pie main.o -o main && git-all
 
     mov eax,33
     mov [data1],eax
@@ -44,12 +44,11 @@ main:
     mov ebx,[data1]
     mul ebx
 
-    mov rdi,format2
-    mov rsi,[data1]
-    mov rdx,rax
-    mov eax,0
+    push format2
+    push rbx
+    push rax
     call printf wrt ..plt
-
+    add rsp,19*8+8+8
 
 
     mov	rax,0	; Exit code 0
