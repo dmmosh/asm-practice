@@ -16,6 +16,6 @@ _start:
     ; 
     MOV bl,[num]
     MOV ch,[num2]
-    MOV eax,1
+    MOV ebx,1
     INT 80h
 

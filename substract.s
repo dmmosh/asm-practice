@@ -18,6 +18,10 @@ _start:
     SUB al, bl
     MOV bl,al
 
+    ; eflags: 
+    ; SF: sign flag
+    ; 
+
     MOV al,1
     INT 80h
 
